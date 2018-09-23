@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+	
+
 	<!--<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=cyrillic" rel="stylesheet">
 
@@ -39,7 +42,8 @@
 			<div class="col-lg-2 tel-header">
 				<img src="image/tel.png">
 				<p>8 (000) 000-00-00</p>				
-				<a href="#"	class="zvonok-header">Заказать звонок</a>
+				<a class="btn btn-success open-modal zvonok-header" rel="leanModal" href="#basic-modal">Заказать звонок</a>
+
 			</div>
 		</div>
 	</div>
@@ -103,7 +107,8 @@
 			</div>
 			<div class="row form-header-part3">
 					<div class="col-lg-12">
-						<a href="#" class="form-header-button">Узнать стоимость фартука</a>
+						<a class="btn btn-success open-modal form-header-button" rel="leanModal" href="#basic-modal">Узнать стоимость фартука</a>
+
 					</div>
 					
 			</div>
@@ -213,7 +218,9 @@
 			<li>Монтаж - 2 часа</li>
 		</ul>
 		<p><span class="portolio-adres-span">Стоимость:</span><br><span class="portolio-adres-cena-span">19 000</span> <span class="portolio-adres-rub-span">рублей</span></p>
-		<a href="#"	class="form-header-button-want">ХОЧУ ТАК ЖЕ!</a>
+		<a class="btn btn-success open-modal form-header-button-want" rel="leanModal" href="#basic-modal">ХОЧУ ТАК ЖЕ!</a>			
+					
+
 	</div>
 </div>
 </div>
@@ -288,7 +295,7 @@
 </p>
 					<p class="eng-block-text">Инженер посчитает стоимость фартука по чертежам кухни, зафиксирует цену в договоре и запустит согласование макета. Вам не нужно ждать, пока вашу кухню смонтируют</p>
 				</div>
-				<a href="#"	class="form-header-button">Вызвать инженера бесплатно</a>
+				<a class="btn btn-success open-modal form-header-button" rel="leanModal" href="#basic-modal">Вызвать инженера бесплатно</a>
 				
 			</div>
 		</div>
@@ -322,7 +329,7 @@
 				
 			</div>
 			<div class="col-md-4">
-				<a href="#" class="form-header-button">Узнать подробности акции</a>
+				<a class="btn btn-success open-modal form-header-button" rel="leanModal" href="#basic-modal">Узнать подробности акции</a>
 			</div>
 			<div class="col-md-4">
 				
@@ -369,7 +376,7 @@
 						<p class="tarif-glass-block-new"><span>от 15 000 руб</span> за фартук</p>
 					</div>
 				</div>
-				<a href="#" class="form-header-button"> Рассчитать стоимость</a>
+				<a class="btn btn-success open-modal form-header-button" rel="leanModal" href="#basic-modal">Рассчитать стоимость</a>
 			</div>
 			<div class="col-md-4">
 				<div class="tarif-glass">
@@ -468,7 +475,7 @@
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
-				<a href="#" class="form-header-button"> Рассчитать стоимость</a>
+				<a class="btn btn-success open-modal form-header-button" rel="leanModal" href="#basic-modal">Рассчитать стоимость</a>
 			</div>
 			<div class="col-md-4"></div>
 		</div>
@@ -487,7 +494,7 @@
 				<p class="contact-block-text"><span>ш. Энтузиастов, 3, корп. 2, 3 этаж<br>Ежедневно с 10:00 до 22:00</span></p>
 				<p class="contact-block-tel"><strong>+7 (000) 000-00-00</strong></p>
 				<p><strong>admin@glasspower.com</strong></p>
-				<a href="#" class="form-header-button">Заказать звонок</a>
+				<a class="btn btn-success open-modal form-header-button" rel="leanModal" href="#basic-modal">Заказать звонок</a>
 			</div>
 		</div>
 		<div class="col-md-8">
@@ -500,6 +507,36 @@
 
 </div><!--/wrapper -->
 
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="basic-modal" class="modal">
+					<h3>Форма обратной связи</h3>
+<form id="application" action="mail.php" method="POST" name="application">
+
+<input name="name" id="applicationName" maxlength="20" placeholder="Введите ваше имя" required />
+
+<input name="email" type="email" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail" required />
+
+<input name="telephone" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон" required/>
+
+<button class="applicationButton" type="submit" form="application">Заказать звонок</button>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/jquery.leanModal.min.js"></script>
+
+	<script>
+$(function() {
+	$('a[rel*=leanModal]').leanModal();
+});
+	</script>
 
 
     <!-- Optional JavaScript -->
